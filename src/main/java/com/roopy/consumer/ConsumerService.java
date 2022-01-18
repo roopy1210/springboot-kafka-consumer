@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class ConsumerService {
 
-    @KafkaListener(topics = {"myTopic"}, groupId = KafkaProperties.CONSUMER_GROUP_ID)
+    @KafkaListener(topics = {"testTopic"}, groupId = KafkaProperties.CONSUMER_GROUP_ID)
     public void consumerMessage(String message) {
-        log.info("[MESSAGE] : {}", message);
+        log.info("Received Message : {}", message);
     }
 
 }
